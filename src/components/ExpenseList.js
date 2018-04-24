@@ -12,6 +12,8 @@ const ExpenseList = (props)=>(
     {props.expenses.map((expense)=>{
         return <ExpenseListItem {...expense}/>
     })}
+
+    
     </div>
 );
 
