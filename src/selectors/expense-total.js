@@ -7,7 +7,7 @@ export default (expenses=[])=>{
         expenses.forEach((expense)=>{
             
             total = parseFloat(expense.amount) + total;
-            console.log("total = ",total)
+            //console.log("total = ",total)
 
          })
          return total;
