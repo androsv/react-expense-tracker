@@ -5,14 +5,16 @@ import {startLogout} from '../actions/auth';
 
 const Header = (props)=> {
     return(
-    <div>
-    <h1>Expensify</h1>
-    <NavLink to="/dashboard" >Go Home</NavLink>
-    <br/>
-    <NavLink to="/create">Go to add</NavLink>
-    <br/>
-    <button onClick={props.signOut}>LOGOUT</button>
-    <hr/>
+    <div className="header-section" >
+    <div className="content-container">
+    <div className="header-section__content">
+    <NavLink className="header-section__title" to="/dashboard" ><h1>Expensify</h1></NavLink>
+    <div className="header-section__logout">
+    <h4>{props.name}</h4>
+    <button className="button__logout" onClick={props.signOut}>LOGOUT</button>
+    </div>
+    </div>
+    </div>
     </div>
     );
 };
@@ -23,4 +25,10 @@ const mapDispatchToProps = (dispatch)=>{
     }
 }
 
-export default connect(undefined,mapDispatchToProps)(Header);
+const mapStateToProps = (state)=>{
+    return{
+        name:state.auth.name
+    }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(Header);

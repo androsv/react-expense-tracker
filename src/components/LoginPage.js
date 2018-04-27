@@ -5,8 +5,12 @@ import {startLogin} from '../actions/auth';
  const LoginPage = (props)=>{
 
     return(
-    <div>
-    <button onClick={props.startLogin}>LOGIN</button>
+    <div className="box-layout">
+    <div className="box-layout__box">
+    <h1 className="box-layout__title">Expense Tracker</h1>
+    <p>Easily Track All Your Expenses</p>
+    <button className="button" onClick={props.startLogin}>Login with Google</button>
+    </div>
     </div>
     );
 

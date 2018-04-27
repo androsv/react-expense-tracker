@@ -1,0 +1,17 @@
+.button {
+    border: none;
+    color: white;
+    padding: $m-size;
+    background: fade-out($blue,.15);
+    font-weight: 300;
+    font-size: $font-size-large;
+  }
+  .button__logout {
+    border: none;
+    color: white;
+    padding: $s-size;
+    width: 100%;
+    background: fade-out($blue,.15);
+    font-weight: 300;
+    font-size: $font-size-large;
+  }

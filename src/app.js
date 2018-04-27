@@ -9,6 +9,8 @@ import {setTextFilter, sortByAmount, sortByDate, setStartDate, setEndDate} from 
 import getVisibleExpenses from './selectors/expenses';
 import {firebase} from './firebase/firebase'
 import {login,logout} from './actions/auth';
+import 'normalize.css/normalize.css';
+import './styles/styles.scss';
 // import firebase from './firebase/firebase'
 const store = configureStore();
 
