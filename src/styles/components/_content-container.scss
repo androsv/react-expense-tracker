@@ -3,3 +3,25 @@
     padding: 0 $m-size;
     max-width: 80rem;
 }
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    
+    input{
+        margin-bottom: $l-size;
+    }
+  
+    textarea{
+        margin-bottom: $l-size;
+    }
+    button{
+        margin-bottom: $l-size;
+    }
+
+    .SingleDatePicker{
+        
+        margin-bottom: $l-size;
+    }
+    
+}

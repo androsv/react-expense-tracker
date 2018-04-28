@@ -2,7 +2,6 @@ import React from 'react';
 import { Router, Route, Switch, Link } from 'react-router-dom';
 import ExpenseDashboardPage from "../components/ExpenseDashboardPage";
 import AddExpensePage from "../components/AddExpensePage";
-import Header from "../components/Header";
 import NotFoundPage from "../components/PageNotFound";
 import EditExpensePage from '../components/EditExpensePage';
 import HelpPage from '../components/HelpPage';

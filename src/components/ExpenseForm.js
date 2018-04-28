@@ -65,7 +65,7 @@ export default class ExpenseForm extends React.Component{
     event.preventDefault();
     
     if(!this.state.description||!this.state.amount){
-      this.setState(()=>({error:'Please enter amount and description'}));
+      this.setState(()=>({error:'Please enter Amount and Description'}));
       }else{
         this.setState(()=>({error:''}));
 
@@ -81,12 +81,17 @@ export default class ExpenseForm extends React.Component{
 
   render(){
       return (
-        <div>
+        <div className="content-container">
+        <div >
+        <div className="form-error">
         {this.state.error && <p>{this.state.error}</p>}
-        <form onSubmit={this.onSubmit}>
-        <input type="text" placeholder="description" autoFocus value={this.state.description}
+        </div>
+        <form  onSubmit={this.onSubmit}>
+        <div class="form-container">
+        <input className="text-input" type="text" placeholder="Description" autoFocus value={this.state.description}
         onChange={this.onDescriptionChange}/>
-        <input type="text" placeholder="amount" value={this.state.amount} onChange={this.onAmountChange}/>
+        <input className="text-input" type="text" placeholder="Amount" value={this.state.amount} onChange={this.onAmountChange}/>
+        <textarea className="text-input__big" placeholder="Add note for expense (optional).." value={this.state.note} onChange={this.onNoteChange}/>
         <SingleDatePicker 
         date={this.state.createdAt}
         onDateChange={this.onDateChange}
@@ -95,9 +100,11 @@ export default class ExpenseForm extends React.Component{
         numberOfMonths={1}
         isOutsideRange={()=>false}
         />
-        <textarea placeholder="Add note for expense (optional).." value={this.state.note} onChange={this.onNoteChange}/>
-        <button>{this.state.buttonText}</button>
+
+        <button className="button">{this.state.buttonText}</button>
+        </div>
         </form>
+        </div>
         </div>
     )
   }

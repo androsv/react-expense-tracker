@@ -11,7 +11,25 @@
     color: white;
     padding: $s-size;
     width: 100%;
+    background: #888;
+    font-weight: 300;
+    font-size: $font-size-large;
+    
+  }
+  .button__add {
+    
+    text-decoration: none;
+    border: none;
+    color: white;
+    padding: $m-size;
     background: fade-out($blue,.15);
     font-weight: 300;
     font-size: $font-size-large;
+    margin-top:$l-size;
+  }
+  .button__remove{
+  @extend .button;
+  background: #ff6464;
+  margin-bottom: $s-size;
+
   }

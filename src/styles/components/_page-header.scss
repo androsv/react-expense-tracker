@@ -1,0 +1,16 @@
+.page-header{
+    background: #f7f7f7;
+    padding: $l-size 0;
+    margin-bottom: $l-size;
+
+
+}
+
+.page-header__title{
+    font-weight: 300;
+    margin: none;
+    span{
+        font-weight: 700;
+    }
+}
+

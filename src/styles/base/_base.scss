@@ -1,5 +1,10 @@
+*{
+  box-sizing: border-box;
+}
+
 html {
   font-size: 62.5%;
+  overflow-y: scroll;
 }
 
 body {
@@ -21,3 +26,9 @@ button:disabled {
   font-weight: bold;
 }
 
+
+.loader{
+background: #f7f7f7;
+padding-left: 400px;            
+
+}

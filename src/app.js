@@ -11,7 +11,9 @@ import {firebase} from './firebase/firebase'
 import {login,logout} from './actions/auth';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
+import Loader from './components/Loading'
 // import firebase from './firebase/firebase'
+
 const store = configureStore();
 
 // const unsubscribe = store.subscribe(()=>{
@@ -23,7 +25,11 @@ const store = configureStore();
 
 // const expenseOne = store.dispatch(addExpense({description:'Rent March',amount:'8000',createdAt:0}));
 // const expenseTwo = store.dispatch(addExpense({description:'coffee',amount:'100',createdAt:195}));
+ 
 
+
+
+ReactDOM.render(<Loader/>, document.getElementById('app-root'));
 
 const jsx = (
     <Provider store={store}>
@@ -33,6 +39,7 @@ const jsx = (
 
 let hasRendered=false
 
+
 const renderApp = ()=>{
     if(!hasRendered){
         ReactDOM.render(jsx, document.getElementById('app-root'));
@@ -40,10 +47,6 @@ const renderApp = ()=>{
 
     }
 }
-ReactDOM.render(<h1><center>Loading....</center></h1>, document.getElementById('app-root'));
-
-
-
 
 
 firebase.auth().onAuthStateChanged((user)=>{

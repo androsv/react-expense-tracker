@@ -5,11 +5,25 @@ import numeral from 'numeral'
 
 const ExpenseListItem = ({dispatch,id,description, amount, createdAt})=> (
 
+    
+    <div className="list-group">
+    
+    <NavLink className="list-style" to={`/edit/${id}`}>
+    <div className="list-group__item">
+    <div>{description}</div>
+    <div className="list-item">
     <div>
-    <NavLink to={`/edit/${id}`}><h3>{description}</h3></NavLink>
-    <h5>{"₹ " }{numeral(amount).format('0,0.00')} { moment(createdAt).format('MMMM Do, YYYY')}</h5>
-
+    {"₹ " }{numeral(amount).format('0,0.00')}
+    </div> 
+    <div>
+    { moment(createdAt).format('MMMM Do, YYYY')}
     </div>
+    </div>
+    </div>
+    </NavLink>
+    
+    </div>
+    
 );
 
 export default ExpenseListItem;
