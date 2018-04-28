@@ -26,9 +26,8 @@ button:disabled {
   font-weight: bold;
 }
 
-
 .loader{
-background: #f7f7f7;
-padding-left: 400px;            
-
+  background: #f7f7f7;
+  display: flex;
+  align-content: center;
 }
